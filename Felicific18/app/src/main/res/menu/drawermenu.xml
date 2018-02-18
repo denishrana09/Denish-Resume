@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/event" android:title="Event" android:icon="@drawable/my"/>
+    <item android:id="@+id/activity" android:title="Activity" android:icon="@drawable/my"/>
+    <item android:id="@+id/contactus" android:title="ContactUs" android:icon="@drawable/my"/>
+    <item android:id="@+id/feedback" android:title="FeedBack" android:icon="@drawable/my"/>
+    <item android:id="@+id/setting" android:title="DDU" android:icon="@drawable/my"/>
+</menu>
