@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int i=2000;
+    int i=10;
     private ImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

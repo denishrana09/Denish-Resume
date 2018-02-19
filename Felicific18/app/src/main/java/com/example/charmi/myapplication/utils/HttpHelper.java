@@ -1,5 +1,7 @@
 package com.example.charmi.myapplication.utils;
 
+import android.util.Log;
+
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -11,7 +13,7 @@ import java.net.URL;
  * Helper class for working with a remote server
  */
 public class HttpHelper {
-
+    private static final String TAG = "HttpHelper";
     /**
      * Returns text from a URL on a web server
      *
@@ -37,6 +39,7 @@ public class HttpHelper {
                 throw new IOException("Got response code " + responseCode);
             }
             is = conn.getInputStream();
+            Log.d(TAG, "downloadUrl: completed");
             return readStream(is);
 
         } catch (IOException e) {
@@ -68,6 +71,7 @@ public class HttpHelper {
                 out.write(buffer, 0, length);
             }
             out.flush();
+            Log.d(TAG, "readStream: completed");
             return byteArray.toString();
         } catch (IOException e) {
             e.printStackTrace();

@@ -2,7 +2,6 @@ package com.example.charmi.myapplication;
 
 import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -80,7 +79,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         Intent i;
 
         switch (v.getId()) {
-            case R.id.one: i = new Intent(this,Day1.class);startActivity(i);break;
+            case R.id.one: i = new Intent(this,OffStageActivity.class);startActivity(i);break;
             case R.id.two: i = new Intent(this,Day2.class);startActivity(i);break;
             case R.id.three: i = new Intent(this,Day3.class);startActivity(i);break;
             case R.id.four: i = new Intent(this,Day4.class);startActivity(i);break;
