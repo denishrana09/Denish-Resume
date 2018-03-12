@@ -1,175 +1,166 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[]{denish-resume-openfont}
-\usepackage{fancyhdr}
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-\pagestyle{fancy}
-\fancyhf{}
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
-\rfoot{Page \thepage \hspace{1pt}}
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.82]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Denish}{Rana}                      % optional, remove / comment the line if not wanted
+\phone[mobile]{+91 9724510845}
+\email{denishrana09@gmail.com}                               % optional, remove / comment the line if not wanted
+                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 \begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     LAST UPDATED DATE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\lastupdated
+\small{Currently in 3rd year of B.Tech in Computer Engineering.I have good knowledge of Android Development and Basic data structures and algorithms. }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{Denish}{Rana}
-{ \href{mailto:denishrana09@gmail.com}{denishrana09@gmail.com} | (+91) 9724510845 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.3\textwidth}
+%Personal Details
+\section{Personal Details}
+\vspace{6pt}
+\begin{itemize}
+\item \textbf{Date of Birth: }26 september 1997\vspace{4pt}
+\item \textbf{Language known: }English, Hindi and Gujarati\vspace{4pt}.
+\item \textbf{Permanent address: }C-18,Shiv Krupa Society,Ambanagar,Near U.M.Road,Surat,Gujarat,India-395002.\vspace{6pt}
+\end{itemize}
+%End Personal Details
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \section{Education}
-
-\subsection{Dharmsinh Desai \newline University, Nadiad}
-\descript{BTech in Computer Engineering (Pursuing) }
-\location{ 2015 |  2019 (Expected)}
-\location{ CPI : 7.0 / 10.0 (Sem 1-5)}
-\sectionsep
-
-\subsection{Jeevanbharti M.V.,\newline Surat}
-\location{Higher Secondary School}
-\location{Percentile - 88.99 \% }
-\sectionsep
-
-\subsection{Jeevanbharti M.V.,\newline Surat}
-\location{Secondary School}
-\location{Percentile - 98.34\%}
-\sectionsep
+\vspace{6pt}
+\begin{itemize}
+\item{\cventry{August 2015 - July 2019(Expected)}{B.Tech in Computer Engineering, CPI: 7.0/10 (Semester 1-5)}{Dharmsinh Desai University, Nadiad}{}{}{\vspace{3pt}}}
+\vspace{6pt}
+\item{\cventry{June 2013 - April 2015}{Higher Secondary Education(HSC), Percentile: 88.99\%}{Jeevanbharti M.V.,Surat}{}{}{\vspace{3pt}}}
+\vspace{6pt}
+\item{\cventry{June 2012 - April 2013}{Secondary Education(SSC), Percentile: 98.34\%}{Jeevanbharti M.V.,Surat}{}{}{\vspace{3pt}}}
+\end{itemize}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LINKS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Courses}
+\vspace{6pt}
+\begin{itemize}
+\item Computer Programming\vspace{4pt}
+\item Data Structures and Algorithms \vspace{4pt}
+\item Database Management Systems\vspace{4pt}
+\item Operating Systems\vspace{4pt}
+\item Software Engineering\vspace{4pt}
+\item Web Development\vspace{6pt}
+\end{itemize}
+ 		
+
+\section{Skills}
+\vspace{6pt}
+\begin{itemize}
+\item \textbf{Proficient in:} JAVA, Android Development, Data Structures, Algorithms, Github, Git\vspace{4pt}
+\item \textbf{Basic ability with:} C, C\#, ASP.NET, MySQL, PHP, Object Oriented Programming,  Oracle Database, LaTeX, Assembly.
+
+\vspace{6pt}
+\end{itemize} 		
+
+
+\section{Projects}
+\vspace{6pt}
+
+
+\begin{itemize}
+
+\item \textbf{Blood Bank Android App (Ongoing)} | \textit{February - March 2018} \vspace{3pt}\newline\textit{Using Java, Firebase, Google MapsAPI}\vspace{4pt}\newline \small{You have to register and add your bloodgroup. whenever anyone wants help, he/she can search e.g.O+,AB+ and get the list of nearest persons in the result. you can make Directly call the person from the result. App helps people in Emergency situations.} \href{https://github.com/denishrana09/BloodBankApp}{\textit{link}}\vspace{6pt}
+
+\newpage
+
+\item{\textbf{College Festival Android App} | \textit{February 2018} \vspace{3pt}\newline\textit{Using JAVA}
+\vspace{4pt}\newline
+\small{Android Application made for College Festival named Felicific. It shows day wise technical,cultural and central-tech activities of festival. it has very good UI (Material Design) and has low storage on mobile.}}
+\href{https://play.google.com/store/apps/details?id=in.opensol.felicific}{\textit{link}}\vspace{6pt}
+
+
+
+\item \textbf{Online Travel Management System} | \textit{September 2017}\vspace{3pt}\newline\textit{Using C\#, ASP.NET}\vspace{4pt}\newline \small{Project is aimed to provide efficient and reliable Travel Management System. You can see how much you spent last month,last week. It has Great CSS.It uses hash function to store credentials.} 
+\end{itemize}
+
+
+
+
+
+
+\section{Co-curricular activity}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{Part time competitive programmer on Codechef.}
+
+\vspace{4pt}
+
+\item{Made College Festival Android App }\vspace{6pt}
+
+\end{itemize}
 
 \section{Links}
 
-Github:// \href{https://github.com/denishrana09}{\bf denishrana09} \\
-StackOverflow:// \href{https://stackoverflow.com/users/8018480/denish-rana}{\bf denish-rana} \\
-LinkedIn://  \href{https://www.linkedin.com/in/denish-rana/}{\bf denish-rana} \\
-Quora://  \href{https://www.quora.com/profile/Denish-Rana-1}{\bf Denish-Rana-1} \\
-Codechef:// \href {https://www.codechef.com/users/denishrana09}{\bf denishrana09} \\
+\vspace{6pt}
+ 
+\begin{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{\href{https://github.com/denishrana09}{GitHub:// \textbf{denishrana09}}}\vspace{4pt}
 
-\section{Coursework}
-\textbullet{} Data Structures and Algorithms\\
-\textbullet{} Database Systems \\
-\textbullet{} Software Engineering \\
-\textbullet{} Operating Systems \\
-\sectionsep
+\item \href{https://stackoverflow.com/users/8018480/denish-rana}{Stackoverflow:// \textbf{denish-rana}}\vspace{4pt}
+\item \href{https://www.linkedin.com/in/denish-rana/}{LinkedIn:// \textbf{denish-rana}}\vspace{6pt}
+\item \href{https://www.codechef.com/users/denishrana09}{Codechef:// \textbf{denishrana09}}\vspace{4pt}
 
+\end{itemize}
 
-\section{Personal Details}
-\textbullet{} \textbf{Date of Birth:} 26/09/1997 \\
-\textbullet{} \textbf{Language known:} English, Hindi\\ \hspace{3mm} and Gujarati.\\
-\textbullet{} \textbf{Permanent address:} C-18, Shiv \\
-\hspace{3mm} Krupa Society; Ambanagar, \\
-\hspace{3mm} Udhna Magdalla Road, Surat; \\ \hspace{3mm} Gujarat, India-395002.
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.69\textwidth}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Projects
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Projects}
+\end{document}
 
 
-\runsubsection{College Festival Android App}
-\descript{| Feb, 2018}
-\location{Deployed at: \href{https://play.google.com/store/apps/details?id=in.opensol.felicific}{\bf https://play.google.com/store/apps/details?id=in.opensol.felicific}}
-
-\location{Technologies used: Java }
-\textbf{Description:}  Application made for College Festival named Felicific. It shows day wise technical,cultural and central-tech activities of festival. it has very good UI (Material Design) and has low storage on mobile.\\
-\sectionsep
-
-
-\runsubsection{Blood Bank Android App*}
-\descript{| Jan, 2018*}
-\location{Technologies used: Java, Firebase, Google MapsAPI}
-\textbf{Description:} You have to register and add your bloodgroup. whenever anyone wants help, he/she can search e.g.O+,AB+ and get the list of nearest persons in the result. you can make Directly call the person from the result. App helps people in Emergency situations. \\
-\sectionsep
-
-\runsubsection{Online Travel Management System}
-\descript{| Sep, 2017}
-\location{Technologies used: C\#, ASP.NET }
-\textbf{Description:} Project is aimed to provide efficient and reliable Travel Management System. You can see how much you spent last month,last week. It has Great CSS.It uses hash function to store credentials.\\
-\sectionsep
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-
-\textbullet{} Data Structures and Algorithms \\
-\textbullet{} Android Development \\
-\textbullet{} GitHub \hspace{1mm} \textbullet{} Git \hspace{1mm} \textbullet{} Firebase \\
-\textbullet{} Object Oriented Programming \\
-\textbullet{} Core Java and Java EE \\
-\textbullet{} C \hspace{2mm} \textbullet{} C\# \\
-\textbullet{} ASP.NET \hspace{1mm} \textbullet{} PHP  \\ 
-\textbullet{} MySQL \hspace{3mm} \textbullet{} Oracle\\
-\sectionsep
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Co-Curricular Activities
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Co-Curricular Activities}
-\textbullet{} Part time competitive programmer on Codechef. \\
-\textbullet{} Made College Festival Android App \\
-\sectionsep
-
-\end{minipage}
-\end{document}  \documentclass[]{article}
+%% end of file `template.tex'.
